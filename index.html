@@ -7,180 +7,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:#000;
-  color:#eaeaea;
-  font-family:'Inter',sans-serif;
-  overflow-x:hidden;
-}
-
-/* === PURPLE GLOW BACKGROUND === */
-.bg-glow{
-  position:fixed;
-  inset:0;
-  background:radial-gradient(circle at 20% 30%, rgba(194,124,255,.25), transparent 60%),
-             radial-gradient(circle at 80% 70%, rgba(194,124,255,.25), transparent 60%);
-  filter:blur(90px);
-  z-index:-1;
-  animation:pulse 12s ease-in-out infinite alternate;
-}
-@keyframes pulse{
-  0%{transform:scale(1)}
-  100%{transform:scale(1.35)}
-}
-
-/* === HEADER === */
-header{
-  text-align:center;
-  padding:160px 20px 80px;
-}
-header h1{
-  font-family:'Russo One';
-  font-size:95px;
-  letter-spacing:8px;
-  color:#c27cff;
-  text-shadow:0 0 40px rgba(194,124,255,.5);
-}
-header p{
-  margin-top:16px;
-  letter-spacing:3px;
-  font-size:16px;
-  text-transform:uppercase;
-  color:#bfa0d9;
-}
-
-/* === NAVIGATION BAR === */
-nav{
-  display:flex;
-  justify-content:center;
-  gap:45px;
-  margin-top:50px;
-  flex-wrap:wrap;
-}
-nav a{
-  text-decoration:none;
-  font-family:'Russo One';
-  color:#c27cff;
-  padding:12px 26px;
-  border:2px solid #c27cff;
-  border-radius:10px;
-  letter-spacing:2px;
-  box-shadow:0 0 18px rgba(194,124,255,.3);
-  transition:.3s;
-}
-nav a:hover{
-  background:#c27cff;
-  color:#000;
-  transform:translateY(-4px);
-}
-
-/* === NEW SECTION STYLE — floating panels === */
-.section{
-  max-width:1200px;
-  margin:100px auto;
-  padding:70px 55px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(194,124,255,.25);
-  border-radius:28px;
-  backdrop-filter:blur(14px);
-  box-shadow:0 0 45px rgba(194,124,255,.2);
-  animation:fadeIn .8s ease;
-}
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(40px)}
-  to{opacity:1;transform:translateY(0)}
-}
-.section h2{
-  font-family:'Russo One';
-  font-size:42px;
-  margin-bottom:26px;
-  text-transform:uppercase;
-  color:#c27cff;
-}
-.section p{
-  font-size:18px;
-  color:#d6c6e8;
-  line-height:1.8;
-}
-
-/* === MUSIC PLAYER — NEW FRAME STYLE === */
-.player-container{
-  margin-top:45px;
-  border-radius:20px;
-  overflow:hidden;
-  border:2px solid rgba(194,124,255,.35);
-  box-shadow:0 0 22px rgba(194,124,255,.25);
-}
-.player-container iframe{
-  width:100%;
-  height:200px;
-}
-
-/* === GRID LINKS — UPDATED STYLE === */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:40px;
-  margin-top:40px;
-}
-.box{
-  padding:40px 35px;
-  border-radius:20px;
-  border:2px solid rgba(194,124,255,.25);
-  background:rgba(194,124,255,.06);
-  text-decoration:none;
-  color:#fff;
-  transition:.3s;
-  box-shadow:0 0 25px rgba(194,124,255,.15);
-}
-.box:hover{
-  transform:translateY(-8px);
-  background:rgba(194,124,255,.18);
-  box-shadow:0 0 35px rgba(194,124,255,.25);
-}
-.box h3{
-  font-family:'Russo One';
-  font-size:26px;
-  color:#c27cff;
-  margin-bottom:12px;
-}
+body{background:#000;color:#eaeaea;font-family:'Inter',sans-serif;overflow-x:hidden}
+header{text-align:center;padding:160px 20px 80px}
+header h1{font-family:'Russo One';font-size:95px;letter-spacing:8px;color:#c27cff;text-shadow:0 0 40px rgba(194,124,255,.5)}
+header p{margin-top:16px;letter-spacing:3px;font-size:16px;text-transform:uppercase;color:#bfa0d9}
+nav{display:flex;justify-content:center;gap:45px;margin-top:50px;flex-wrap:wrap}
+nav a{text-decoration:none;font-family:'Russo One';color:#c27cff;padding:12px 26px;border:2px solid #c27cff;border-radius:10px;letter-spacing:2px;transition:.3s}
+nav a:hover{background:#c27cff;color:#000;transform:translateY(-4px)}
+.section{max-width:1200px;margin:100px auto;padding:70px 55px;background:rgba(255,255,255,.04);border:1px solid rgba(194,124,255,.25);border-radius:28px;backdrop-filter:blur(14px);animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.section h2{font-family:'Russo One';font-size:42px;margin-bottom:26px;text-transform:uppercase;color:#c27cff}
+.section p{font-size:18px;color:#d6c6e8;line-height:1.8}
+.player-container{margin-top:45px;border-radius:20px;overflow:hidden;border:2px solid rgba(194,124,255,.35)}
+.player-container iframe{width:100%;height:200px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;margin-top:40px}
+.box{padding:40px 35px;border-radius:20px;border:2px solid rgba(194,124,255,.25);background:rgba(194,124,255,.06);text-decoration:none;color:#fff;transition:.3s}
+.box:hover{transform:translateY(-8px);background:rgba(194,124,255,.18)}
+.box h3{font-family:'Russo One';font-size:26px;color:#c27cff;margin-bottom:12px}
 .box p{color:#d5c1ef;font-size:15px}
-
 .coming{opacity:.35;pointer-events:none}
-
-/* === CONTACT BOX SPECIAL STYLE === */
-.contact-box{
-  text-align:center;
-  padding:60px 30px;
-  font-size:20px;
-  color:#d5c1ef;
-}
-
-/* === FOOTER === */
-footer{
-  text-align:center;
-  padding:90px 0 60px;
-  font-size:15px;
-  color:#7f6a9c;
-  letter-spacing:3px;
-}
+.contact-box{text-align:center;padding:60px 30px;font-size:20px;color:#d5c1ef}
+footer{text-align:center;padding:90px 0 60px;font-size:15px;color:#7f6a9c;letter-spacing:3px}
+.pills-container{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.pill{position:absolute;width:18px;height:38px;background:linear-gradient(to bottom, #ff2b2b 50%, #ffffff 50%);border-radius:12px;opacity:0.95;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(-100vh) rotate(0deg)}100%{transform:translateY(100vh) rotate(360deg)}}
 </style>
 </head>
 <body>
-<div class="bg-glow"></div>
-
 <header>
   <h1>LIL CODEINE</h1>
-  <p>Underground Digital Rap — Purple Realm Edition</p>
+  <p>Underground Digital Rap</p>
 </header>
-
 <nav>
   <a href="#music">Musik</a>
   <a href="#links">Links</a>
   <a href="#contact">Kontakt</a>
 </nav>
-
-<!-- === MUSIC SECTION === -->
 <div class="section" id="music">
   <h2>Aktuel Track</h2>
   <p>Mørke bølger, digital energi og en lyd, der kun findes i Lil Codeines univers.</p>
@@ -188,8 +50,6 @@ footer{
     <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/lilcodeinedk/paranoia&auto_play=false&hide_related=true&show_comments=false&show_user=false"></iframe>
   </div>
 </div>
-
-<!-- === LINKS SECTION === -->
 <div class="section" id="links">
   <h2>Officielle Links</h2>
   <p>Dyk dybere i universet. Musik, projekter og eksklusive releases.</p>
@@ -204,17 +64,24 @@ footer{
     </div>
   </div>
 </div>
-
-<!-- === CONTACT SECTION === -->
 <div class="section" id="contact">
   <h2>Kontakt</h2>
   <div class="contact-box">
-    Booking • Features • Collabs<br>
-    Skriv direkte via DM eller mail.
+    Booking • Features • Collabs<br>Skriv direkte via DM eller mail.
   </div>
 </div>
-
-<footer>© 2025 LIL CODEINE — PURPLE VOID REALM</footer>
-
+<footer>© 2025 LIL CODEINE</footer>
+<div class="pills-container"></div>
+<script>
+const container=document.querySelector('.pills-container');
+for(let i=0;i<15;i++){
+  const pill=document.createElement('div');
+  pill.className='pill';
+  pill.style.left=Math.random()*100+'vw';
+  pill.style.top='-40px';
+  pill.style.animationDuration=(3+Math.random()*4)+'s';
+  container.appendChild(pill);
+}
+</script>
 </body>
 </html>
